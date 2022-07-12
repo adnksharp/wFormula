@@ -1,0 +1,39 @@
+body
+{
+    background-color: #22272b;
+    color: #f0f0f0;
+    font-family: 'SF Pro Display', 'Arial', sans-serif;
+}
+
+h1, h3
+{
+    text-align: center;
+    border-bottom: 1px solid #777;
+}
+
+div
+{
+    display: inline-block;
+    margin: 0 2vw;
+    vertical-align: top;
+}
+
+button
+{
+    background-color: #f0f0f0;
+    border: 0;
+    color: #22272b;
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+.formuoli
+{
+    color: #fcc920;
+    font-family: 'SF Pro Display', 'Arial', sans-serif;
+}
+
+#load
+{
+    width: 76vw;
+}

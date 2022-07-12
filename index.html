@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulas</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <h1>Circuitos RC</h1>
+    <div>
+        <h3>Base:</h3>
+        <p>Voltaje:</p>
+        <p class="formuoli">
+            \[ V_R + V_C - \varepsilon = 0 \]
+            \[ IR + V_C = \varepsilon \]
+        </p>
+        <p>Corriente:</p>
+        <p class="formuoli">
+            \[ I = I_R = I_C = C {{dV_C \over dt}} \]
+        </p>
+    </div>
+    <div id="load" class="text-ch">
+        <h3>Pasos:
+            <button class="sWork">siguiente</button>
+        </h3>
+        <p class="formuoli" id="go-1">
+            \[C{{d V_C } \over {dt}}R + {V_C} = { \varepsilon} \]
+            \[{{d V_C } \over {dt}} + {V_C \over {RC}} = { \varepsilon \over {RC} } \]
+
+        </p>
+        <p class="formuoli" id="go-2" hidden="hidden">
+            \[{{dV_{Ch}} \over dt} + {{V_{Ch}} \over {RC}} = 0\]
+            \[ \int {1 \over {V_{Ch}} }d V_{Ch} = - {{1 \over {RC}} \int dt}\]
+            \[ \ln (V_{Ch}) + C_1 = -{{1 \over {RC}} t} + C_2\]
+            \[ \ln (V_{Ch}) - \ln (k) = -{1 \over {RC} }t\]
+            \[ \ln \left ( V_{Ch} \over k \right ) = -{{1 \over {RC}} t}\]
+            \[V_{Ch} = k e ^ {-{{1 \over {RC}} t}}\]
+        </p>
+        <p class="formuoli" id="go-3" hidden="hidden">
+            \[V_{cp} = A \]
+            \[{1 \over RC} A = {\varepsilon \over {RC}}\]
+            \[A= \varepsilon = V_{cp}\]
+        </p>
+        <p class="formuoli" id="go-4" hidden="hidden">
+            \[\tau _c = RC\]
+            \[V_c (t) = V_{ch} + V_{cp} = ke^{-{{t \over {\tau _c}}}} + \varepsilon\]
+            \[V_c (0) = 0 = ke^0 + \varepsilon\]
+            \[V_c (t) = \varepsilon (1 - e^{-{t \over {\tau _c}}})\]
+            \[I_c (t) = C {{dV_C} \over dt} = C \varepsilon \left [ 0 + {1 \over {RC}} e^{-{t \over {RC}}} \right ] =
+            {\varepsilon \over R} e^{-{t \over {RC}}}\]
+        </p>
+    </div>
+    <script src="index.js"> </script>
+</body>
+
+</html>
